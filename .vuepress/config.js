@@ -1,5 +1,6 @@
 module.exports = {
     title: 'Dat156',
+    base: '/DAT156/',
     description: 'Praksis for data',
     themeConfig: {
         nav: [
