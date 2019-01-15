@@ -1,0 +1,11 @@
+{
+  "name": "Dat156",
+  "version": "1.0.0",
+  "description": "Praksis",
+  "main": "index.js",
+  "author": "Preben Haukebøe",
+  "license": "MIT",
+  "dependencies": {
+    "vuepress": "^0.14.8"
+  }
+}
