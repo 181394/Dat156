@@ -1,6 +1,6 @@
 ---
 {
-    "title": "Uke 1 hos SGG",
+    "title": "Uke 1",
     "navbar": true
 }
 ---

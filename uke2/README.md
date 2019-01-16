@@ -1,6 +1,6 @@
 ---
 {
-    "title": "Uke 2 hos SGG"
+    "title": "Uke 2"
 }
 ---
 
