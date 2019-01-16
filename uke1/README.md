@@ -4,4 +4,4 @@
 hei på deg!
 
 ## Tirsdag
-Din gamle seg!
+Din gamle sei!
