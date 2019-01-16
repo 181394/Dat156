@@ -5,6 +5,10 @@
   "main": "index.js",
   "author": "Preben Haukebøe",
   "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev",
+    "prod": "vuepress build"
+  },
   "dependencies": {
     "vuepress": "^0.14.8"
   }
