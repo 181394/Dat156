@@ -4,9 +4,9 @@
 }
 ---
 
-# Hello VuePress
+# Praksis hot Scout Gaming Group
 
-<p align="center">
-<img :src="$withBase('/images/scout_logo_dark.png')" alt="scout logo" width="75%">
+<p align="left">
+<img :src="$withBase('/images/scout_logo.png')" alt="scout logo" width="50%">
 </p>
 
