@@ -45,8 +45,8 @@ Mulige implementasjoner:
     "$Spendinglimit": {
       "if": {
         "test": {
-          "role": "user",
-          "percentage": 30
+          "role": "user",    // IF has role user
+          "percentage": 30   // AND is within 30% of all users
         },
         "then": {
           "limit": 20000
@@ -74,8 +74,8 @@ Mulige implementasjoner:
     "$Spendinglimit": {
       "if": {
         "test": [
-          {"role": "admin"},
-          {"percentage": 20}
+          {"role": "admin"},   // IF has role admin
+          {"percentage": 20}   // OR is within 20% of all users
         ],
         "then": {
           "limit": 20000
