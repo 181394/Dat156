@@ -10,6 +10,12 @@
 Denne uken: 18
 :::
 
+## Onsdag
+Idag var Henrik tilbake, så jeg har brukt litt tid på å ta ham gjennom det jeg har gjort på front-end delen.
+Ellers har jeg jobbet masse med "IF" kommandoen til config'en, men da jeg viste frem arbeidet fikk jeg beskjed om at jeg hadde tolket problemstillingen feil. Så da skrotet jeg det meste av arbeidet og begynte på nytt. Etter en stund var jeg nokså fornøyd og skulle begynne å teste, men testene stemmer ikke helt overens med det jeg forventet, da de alltid viser godkjent, selv når de absolutt ikke skal. Jeg mistenker at dette kan være grunnet mindre forståelse for Node.js sin module.exports funksjon fra min side, så det blir hjemmelekse for meg å sette meg inn i dette.
+
+I håp om å unngå tilsvarende senere vil jeg nok bruke store deler av morgendagen på å sette meg inn i Node.js og Express.js. Dette er og svært relevant for bacheloroppgaven min så der har jeg litt ekstra motivasjon.
+
 
 ## Tirsdag
 Denne uken er visst noe forskjøvet, da mandagen kom på tirsdag.
