@@ -7,7 +7,9 @@
 # Uke 2
 
 ::: tip Timer
-Denne uken: 18
+Denne uken: 26
+
+Totalt: 68
 :::
 
 ## Onsdag
