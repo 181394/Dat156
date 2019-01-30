@@ -7,7 +7,7 @@
     <meta name="description" content="Praksis for data">
     
     
-    <link rel="preload" href="/Dat156/assets/css/0.styles.8b69f94f.css" as="style"><link rel="preload" href="/Dat156/assets/js/app.f649f6df.js" as="script"><link rel="preload" href="/Dat156/assets/js/5.9920abd9.js" as="script"><link rel="prefetch" href="/Dat156/assets/js/2.6c08cd20.js"><link rel="prefetch" href="/Dat156/assets/js/3.02fc5928.js"><link rel="prefetch" href="/Dat156/assets/js/4.b81983ff.js"><link rel="prefetch" href="/Dat156/assets/js/6.81a8b979.js">
+    <link rel="preload" href="/Dat156/assets/css/0.styles.8b69f94f.css" as="style"><link rel="preload" href="/Dat156/assets/js/app.3a1730b4.js" as="script"><link rel="preload" href="/Dat156/assets/js/5.789ab7e5.js" as="script"><link rel="prefetch" href="/Dat156/assets/js/2.6c08cd20.js"><link rel="prefetch" href="/Dat156/assets/js/3.02fc5928.js"><link rel="prefetch" href="/Dat156/assets/js/4.b81983ff.js"><link rel="prefetch" href="/Dat156/assets/js/6.81a8b979.js">
     <link rel="stylesheet" href="/Dat156/assets/css/0.styles.8b69f94f.css">
   </head>
   <body>
@@ -28,31 +28,63 @@ Mulige implementasjoner:</p> <div class="language-js extra-class"><pre class="la
 
 <span class="token comment">// Her ligger betingelsene i samme json objekt. </span>
 <span class="token comment">// Dette indikerer at alle betingelsene må være </span>
-<span class="token comment">// oppfylt for at uttrykket skal evalueres til å være sant.</span>
+<span class="token comment">// oppfylt for at uttrykket skal evaluere &quot;then&quot; klausulen,</span>
+<span class="token comment">// ellers evalueres &quot;else&quot; klausulen.</span>
+
+
+<span class="token comment">// Dette eksempelet vil gi kr 20.000,- i spendinglimit</span>
+<span class="token comment">// til 30% av brukerne, og kr 10.000,- til resten</span>
 <span class="token punctuation">{</span>
-  <span class="token string">&quot;sports-book&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">&quot;$enabled&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      <span class="token string">&quot;test&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token string">&quot;role&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;tester&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// IF has role tester</span>
-      <span class="token string">&quot;load&quot;</span><span class="token punctuation">:</span> <span class="token string">'&lt; 10%'</span>               <span class="token comment">// AND load is less than 10%</span>
+  <span class="token string">&quot;myFeature&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+
+    <span class="token string">&quot;$Spendinglimit&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;if&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;test&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;role&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;user&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;percentage&quot;</span><span class="token punctuation">:</span> <span class="token number">30</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;then&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;limit&quot;</span><span class="token punctuation">:</span> <span class="token number">20000</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;else&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;limit&quot;</span><span class="token punctuation">:</span> <span class="token number">10000</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// Her ligger betingelsene i en tabell (Array) i et json objekt. </span>
 <span class="token comment">// Dette indikerer at minst ett av betingelsene må være </span>
-<span class="token comment">// oppfylt for at uttrykket skal evalueres til å være sant.</span>
+<span class="token comment">// oppfylt for at uttrykket skal evaluere &quot;then&quot; klausulen,</span>
+<span class="token comment">// ellers evalueres &quot;else&quot; klausulen.</span>
+
+<span class="token comment">// Dette eksempelet vil gi kr 20.000,- i spendinglimit</span>
+<span class="token comment">// til alle admin-brukere og 20% av brukerne </span>
+<span class="token comment">// og kr 10.000,- til resten</span>
 <span class="token punctuation">{</span>
-  <span class="token string">&quot;sports-book&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">&quot;$enabled&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">{</span> <span class="token string">&quot;test&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token string">&quot;role&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;tester&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>  <span class="token comment">// IF has role tester</span>
-      <span class="token punctuation">{</span> <span class="token string">&quot;sample&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;10%&quot;</span> <span class="token punctuation">}</span>                 <span class="token comment">// OR sample 10% of users</span>
-    <span class="token punctuation">]</span>
+  <span class="token string">&quot;myFeature&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+
+    <span class="token string">&quot;$Spendinglimit&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;if&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;test&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span><span class="token string">&quot;role&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;admin&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span><span class="token string">&quot;percentage&quot;</span><span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;then&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;limit&quot;</span><span class="token punctuation">:</span> <span class="token number">20000</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;else&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;limit&quot;</span><span class="token punctuation">:</span> <span class="token number">10000</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre></div><p>Jeg har og noen tanker om å implementere en &quot;else&quot; til if'en. Dette vil være en &quot;default&quot; verdi som bare blir reell om uttrykket i if'en evalueres til usant.</p></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Sist oppdatert: </span> <span class="time">1/30/2019, 9:11:48 AM</span></div></div> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/Dat156/uke1/">
+</code></pre></div><p>Jeg har og noen tanker om å implementere en &quot;else&quot; til if'en. Dette vil være en &quot;default&quot; verdi som bare blir reell om uttrykket i if'en evalueres til usant.</p></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Sist oppdatert: </span> <span class="time">1/30/2019, 1:58:36 PM</span></div></div> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/Dat156/uke1/">
           Uke 1 - Rammeverk og hodeverk
         </a>
         →
       </span></p></div> </div> <!----></div></div>
-    <script src="/Dat156/assets/js/app.f649f6df.js" defer></script><script src="/Dat156/assets/js/5.9920abd9.js" defer></script>
+    <script src="/Dat156/assets/js/app.3a1730b4.js" defer></script><script src="/Dat156/assets/js/5.789ab7e5.js" defer></script>
   </body>
 </html>
