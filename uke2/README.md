@@ -88,4 +88,3 @@ Mulige implementasjoner:
   }
 }
 ```
-Jeg har og noen tanker om å implementere en "else" til if'en. Dette vil være en "default" verdi som bare blir reell om uttrykket i if'en evalueres til usant.
