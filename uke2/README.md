@@ -33,12 +33,28 @@ Mulige implementasjoner:
 
 // Her ligger betingelsene i samme json objekt. 
 // Dette indikerer at alle betingelsene må være 
-// oppfylt for at uttrykket skal evalueres til å være sant.
+// oppfylt for at uttrykket skal evaluere "then" klausulen,
+// ellers evalueres "else" klausulen.
+
+
+// Dette eksempelet vil gi kr 20.000,- i spendinglimit
+// til 30% av brukerne, og kr 10.000,- til resten
 {
-  "sports-book": {
-    "$enabled": {
-      "test": { "role": "tester" }, // IF has role tester
-      "load": '< 10%'               // AND load is less than 10%
+  "myFeature": {
+
+    "$Spendinglimit": {
+      "if": {
+        "test": {
+          "role": "user",
+          "percentage": 30
+        },
+        "then": {
+          "limit": 20000
+        },
+        "else": {
+          "limit": 10000
+        }
+      }
     }
   }
 }
@@ -46,13 +62,29 @@ Mulige implementasjoner:
 ```js
 // Her ligger betingelsene i en tabell (Array) i et json objekt. 
 // Dette indikerer at minst ett av betingelsene må være 
-// oppfylt for at uttrykket skal evalueres til å være sant.
+// oppfylt for at uttrykket skal evaluere "then" klausulen,
+// ellers evalueres "else" klausulen.
+
+// Dette eksempelet vil gi kr 20.000,- i spendinglimit
+// til alle admin-brukere og 20% av brukerne 
+// og kr 10.000,- til resten
 {
-  "sports-book": {
-    "$enabled": [
-      { "test": { "role": "tester" }, },  // IF has role tester
-      { "sample": "10%" }                 // OR sample 10% of users
-    ]
+  "myFeature": {
+
+    "$Spendinglimit": {
+      "if": {
+        "test": [
+          {"role": "admin"},
+          {"percentage": 20}
+        ],
+        "then": {
+          "limit": 20000
+        },
+        "else": {
+          "limit": 10000
+        }
+      }
+    }
   }
 }
 ```
