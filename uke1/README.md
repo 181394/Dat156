@@ -15,6 +15,8 @@ Denne uken: 42
 Idag har jeg jobbet videre med problemene fra gårdagen. Jeg har sett på hvordan jeg kan lagre endret data fra klienten i ett json objekt for å sende det over til serveren med bare en forespørsel og etter mye om og men er det i boks. Problemet nå er at det jeg mottar på serveren ser forferdelig ut, men det fungerer, så det blir et problem jeg ser på siden.
 Jeg har og lagt inn en "legg til" funksjon på klienten slik at jeg slipper å styre så mye med sql-spørringer i terminalen, men foreløpig tar den bare inn ett argument, så det må fikses senere. 
 
+<img :src="$withBase('/images/feature-flags-v2.png')" alt="feature flags v2" width="40%">
+
 Det har gått opp for meg at jeg har brukt litt mye tid på front-end delen av oppgaven, men når Henrik ligger hjemme syk, var det egentlig nødvendig. Jeg har og lært mye om hvordan systemet fungerer.
 
 Videre har jeg separert funksjonen for legg til og oppdater på serverside, for å få mer kontroll på hva som skjer og for å lettere oppdage om noen feil oppstår.
