@@ -1,25 +1,24 @@
 ---
-{
-    "title": "Uke 2 - Backend og conditionals"
-}
+{ 'title': 'Uke 2 - Backend og conditionals' }
 ---
 
 # Uke 2
 
 ::: tip Timer
-Denne uken: 26
+Denne uken: 42
 
-Totalt: 68
+Totalt: 84
 :::
 
 ## Onsdag
+
 Idag var Henrik tilbake, så jeg har brukt litt tid på å ta ham gjennom det jeg har gjort på front-end delen.
 Ellers har jeg jobbet masse med "IF" kommandoen til config'en, men da jeg viste frem arbeidet fikk jeg beskjed om at jeg hadde tolket problemstillingen feil. Så da skrotet jeg det meste av arbeidet og begynte på nytt. Etter en stund var jeg nokså fornøyd og skulle begynne å teste, men testene stemmer ikke helt overens med det jeg forventet, da de alltid viser godkjent, selv når de absolutt ikke skal. Jeg mistenker at dette kan være grunnet mindre forståelse for Node.js sin module.exports funksjon fra min side, så det blir hjemmelekse for meg å sette meg inn i dette.
 
 I håp om å unngå tilsvarende senere vil jeg nok bruke store deler av morgendagen på å sette meg inn i Node.js og Express.js. Dette er og svært relevant for bacheloroppgaven min så der har jeg litt ekstra motivasjon.
 
-
 ## Tirsdag
+
 Denne uken er visst noe forskjøvet, da mandagen kom på tirsdag.
 Idag forsov jeg meg litt, så jeg skyntet meg ut og mistet bybanen akkurat og måtte vente i vel 8 min på neste. Jeg fikk meg en god plass og satt meg godt til rette. Så etter et par stopp får vi beskjed om at det er teknisk feil på bybanen og alle må av og vente på neste. Heldigvis var det nå mange som ventet på den neste vognen, som også var ganske full. Så turen endte opp med å stå som sild i tønne med tjukk boblejakke på. :unamused:
 
@@ -29,6 +28,7 @@ Idag har jeg skrevet ferdig sql-spørringen fra server, som oppdaterer alle endr
 Jeg har og gått i dybden og analysert flyten i programmet for å få ordentlig oversikt over hvordan konfigurasjonen fra databasen blir håndtert på serveren. Jeg begynner å bli klar for å skrive logikken bak if'statementene.
 
 ## Mandag
+
 Idag har jeg hatt en god dag. Jeg har fått skrotet mye unødvendig og dårlig kode, og erstattet det med korte og lettleselige funksjoner.
 På klient-siden får jeg nå sendt alle endringer i ett flott og lett håndterlig json objekt. På serversiden har jeg begynt å lage en sql spørring (query) for å oppdaterer alle endringer i en engang, istedenfor å ha det i en løkke (noe som kan bli svært tidkrevende om mange endringer blir gjort).
 
@@ -39,8 +39,8 @@ Mulige implementasjoner:
 // AND-case
 // $ - signaliserer et uttrykk som skal evalueres
 
-// Her ligger betingelsene i samme json objekt. 
-// Dette indikerer at alle betingelsene må være 
+// Her ligger betingelsene i samme json objekt.
+// Dette indikerer at alle betingelsene må være
 // oppfylt for at uttrykket skal evaluere "then" klausulen,
 // ellers evalueres "else" klausulen.
 
@@ -67,14 +67,15 @@ Mulige implementasjoner:
   }
 }
 ```
+
 ```js
-// Her ligger betingelsene i en tabell (Array) i et json objekt. 
-// Dette indikerer at minst ett av betingelsene må være 
+// Her ligger betingelsene i en tabell (Array) i et json objekt.
+// Dette indikerer at minst ett av betingelsene må være
 // oppfylt for at uttrykket skal evaluere "then" klausulen,
 // ellers evalueres "else" klausulen.
 
 // Dette eksempelet vil gi kr 20.000,- i spendinglimit
-// til alle admin-brukere og 20% av brukerne 
+// til alle admin-brukere og 20% av brukerne
 // og kr 10.000,- til resten
 {
   "myFeature": {
