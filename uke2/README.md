@@ -6,9 +6,21 @@
 
 ::: tip Timer
 Denne uken: 42
-
-Totalt: 84
 :::
+
+## Fredag
+
+Arbeidsken er over og helgen kan snart begynne!
+Idag har jeg jobbet videre med gårdagens utløpsdato-oppgave. Dagen har for det meste gått til å sette opp serversiden slik at den kan ta imot HTTP-requests, for å bruke Postman for å sjekke at responsen kommer tilbake i riktig format og at ingenting går gale.
+Videre har jeg lagt til valgfri datostempling av _features_ man legger til fra brukerkrensesnittet (ja jeg har klart å rote meg tilbake på klientsiden). Jeg har og endret koden på serversiden slik at alle _features_ som er utgått på dato ikke sendes fra server i det heletatt, men fortsatt ligger i databasen. Dette gjør at programmet ikke tar unødvendig mye tid å laste og det er enkelt å hente frem historikk.
+
+## Torsdag
+
+Idag har jeg lagt til en debugger for mocha og chai i VS code, for å finne ut hva som går gale i koden min og etter mye frem og tilbake mellom linjene fant jeg ut av det. Nå fungerer "IF" kommandoen helt knirkefritt (hvertfall etter hva jeg har klart å teste). Jeg var egentlig nokså ferdig med den opprinnelige oppgaven nå, men det har kommet et par ekstra ønskelige funksjoner på bordet.
+
+De nye funskjonene jeg skal implementere er å legge til mulighet for utløpsdato på forskjellige _features_. Dette vil brukes ved tidsbegrensede arrangement, som f.eks VM eller OL. I tillegg ønsket de en måte å søke på forskjellige _features_, slik at det blir enklere å finne fram etterhvert som det blir lagt inn mer og mer i databasen.
+
+Jeg begynte såvidt på implementasjonen av utløpsdato i dag, ved å legge til en kollonne av typen **TIMESTAMPTZ** i databasen. Den fungerer direkte med Javascript sine Date objekter som igjen er kompatibel med sammenlignings operatørene: **<** og **>**. Dette gjør det svært enkelt å teste om en gitt dato er passert.
 
 ## Onsdag
 
