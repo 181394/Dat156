@@ -9,7 +9,7 @@ module.exports = {
       { text: 'ScoutGG', link: 'https://scoutgaminggroup.com/' }
     ],
     sidebar: {
-      '/': ['/uke4/', '/uke3/', '/uke2/', '/uke1/']
+      '/': ['/uke5/', '/uke4/', '/uke3/', '/uke2/', '/uke1/']
     },
     lastUpdated: 'Sist oppdatert',
     serviceWorker: {
