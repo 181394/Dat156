@@ -5,14 +5,22 @@
 # Uke 5
 
 :::tip Timer
-Denne uken: 18
+Denne uken: 27
 
-Totalt: 165
+Totalt: 174
 :::
+
+## Onsdag
+
+Dagen idag har gått ganske greit. Idag var det karrieredag på HVL, så jeg tok meg noen timers pause fra jobb for å dra bort å prate litt med bedriftene. Da jeg kom tilbake fortsatte jeg med å implementere _søkehjelpen_ jeg snakket om i går, men ble fort avbrutt da økonomisjefen kom og utfordret meg til en runde bordtennis. Det angret han fort på. Jeg har nemlig et sjult talent i grenen.:trophy: Etter en overlegen seier hadde jeg plenti av motivasjon til å fortsette på kodingen.
+
+Jeg har fått til å laste inn "nøklene" til alle _features_ fra databasen og viser de som søkeforslag under søkefeltet når trykker der. Om en trykker på et av forslagene blir det og automatisk fylt ut i søkefeltet.
+
+Videre skal jeg forsøke å få til at forslagene endrer seg basert på hva man skriver.
 
 ## Tirsdag
 
-Tirsdagen er kommet og Øystein var tilbake. Jeg viste frem det jeg har gjort og det virket som om det var greit. Jeg spurte om han hadde noen flere oppgaver til meg og etter litt betenknigstid ba han meg om å lage et penere og mer funksjonelt brukergrensesnitt med mulighet for å implmentere **_motoren_**, både på server- og klient-side. Dagen idag har i hovedsak gått til å prøve å forbedre søkemotoren og finne løsninger for hvordan jeg kan implementere en "søkehjelp", som skal komme opp med forslag til søkeord, som hele tiden endrer seg med mer spesifikke forslag etterhvert som man skriver. Det finnes allerede en funskjon som løser dette integrert i **_HTML_**-språket, men denne er ikke støtte for i safari-nettleseren. Så nå er jeg litt bitter på alle apple-brukere som ikke har gått over til _Google Chrome_, for at jeg må skrive en egen funksjon for dette, med støtte for å tolke _javascript_-objekter.
+Tirsdagen er kommet og Øystein er tilbake. Jeg viste frem det jeg har gjort og det virket som om det var greit. Jeg spurte om han hadde noen flere oppgaver til meg og etter litt betenknigstid ba han meg om å lage et penere og mer funksjonelt brukergrensesnitt med mulighet for å implmentere **_motoren_**, både på server- og klient-side. Dagen idag har i hovedsak gått til å prøve å forbedre søkemotoren og finne løsninger for hvordan jeg kan implementere en "søkehjelp", som skal komme opp med forslag til søkeord, som hele tiden endrer seg med mer spesifikke forslag etterhvert som man skriver. Det finnes allerede en funskjon som løser dette integrert i **_HTML_**-språket, men denne er ikke støtte for i safari-nettleseren. Så nå er jeg litt bitter på alle apple-brukere som ikke har gått over til _Google Chrome_, for at jeg må skrive en egen funksjon for dette, med støtte for å tolke _javascript_-objekter.
 Dette var vanskeligere enn jeg hadde sett for meg...
 
 Så vi får se hvordan det går utover uken.

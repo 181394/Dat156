@@ -1,5 +1,5 @@
 ---
-{ 'title': 'Uke 4 - Ny klient i Python' }
+{ 'title': 'Uke 4 - Implementasjon i Python' }
 ---
 
 # Uke 4
