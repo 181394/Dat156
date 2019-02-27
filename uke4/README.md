@@ -15,7 +15,7 @@ Med helgen like rundt hjørnet og peppes pizza til lunsj har dagen gått svært 
 
 ## Torsdag
 
-Idag skulle jeg og på min andre jobb, så dagen ble relativt kort, men jeg fikk begynt på å implementere **_motoren_** (muilig dette er feil ord å bruke, men jeg kommer ikke på noe bedre.) som håndterer og komputerer _config_-filen fra databasen.
+Idag skulle jeg og på min andre jobb, så dagen ble relativt kort, men jeg fikk begynt på å implementere **_motoren_** (mulig dette er feil ord å bruke, men jeg kommer ikke på noe bedre.) som håndterer og komputerer _config_-filen fra databasen.
 
 ## Onsdag
 

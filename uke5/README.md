@@ -5,16 +5,33 @@
 # Uke 5
 
 :::tip Timer
-Denne uken: 27
-
-Totalt: 174
+Denne uken: 40
 :::
+
+## Fredag
+
+Idag har jeg jobbet endel med å rette opp i _bugs_ som har dukket opp underveis i utviklingen av programmet. Jeg har notert ned de _bugsene_ jeg har kommet over fra jeg begynte, slik at jeg ikke skulle glemme dem og at jeg alltid skulle ha noe å gjøre. Denne gangen var det å oppdatere flere verdier i samme objekt, samtidig. Med litt hjelp fra Øystein, gikk dette veldig greit.
+
+## Torsdag
+
+Torsdagen ble i hovedsak brukt til å fikse på estetikk i _GUI_, eller brukergrensesnitt som det så fint heter på norsk.
+Jeg har lagt til et _gridlayout_ slik at jeg kan plassere de forskjellige komponentene der jeg ønsker, for å gjøre siden mer oversiktlig. Jeg har og lagt til en **_Header_** for å gjøre siden litt penere å se på.
+
+<p align="center">
+<img :src="$withBase('/images/gui-v3.png')" alt="scout logo" width="80%">
+</p>
+
+Videre har jeg forbedret søkefunksjonen i samspill med søkeforslagene, med god hjelp fra Øystein.
 
 ## Onsdag
 
-Dagen idag har gått ganske greit. Idag var det karrieredag på HVL, så jeg tok meg noen timers pause fra jobb for å dra bort å prate litt med bedriftene. Da jeg kom tilbake fortsatte jeg med å implementere _søkehjelpen_ jeg snakket om i går, men ble fort avbrutt da økonomisjefen kom og utfordret meg til en runde bordtennis. Det angret han fort på. Jeg har nemlig et sjult talent i grenen.:trophy: Etter en overlegen seier hadde jeg plenti av motivasjon til å fortsette på kodingen.
+Dagen idag har gått ganske greit. Idag var det karrieredag på HVL, så jeg tok meg noen timers pause fra jobb for å dra bort å prate litt med bedriftene. Da jeg kom tilbake fortsatte jeg med å implementere _søkehjelpen_ jeg snakket om i går, men ble fort avbrutt da økonomisjefen kom og utfordret meg til en runde bordtennis. Det angret han fort på.:trophy: Da jeg kom seirende ut av arenaen, hadde jeg plenti av motivasjon til å fortsette på kodingen.
 
 Jeg har fått til å laste inn "nøklene" til alle _features_ fra databasen og viser de som søkeforslag under søkefeltet når trykker der. Om en trykker på et av forslagene blir det og automatisk fylt ut i søkefeltet.
+
+<p align="left">
+<img :src="$withBase('/images/searchsuggestions.png')" alt="scout logo" width="35%">
+</p>
 
 Videre skal jeg forsøke å få til at forslagene endrer seg basert på hva man skriver.
 

@@ -10,8 +10,8 @@ Denne uken: 42
 
 ## Fredag
 
-Arbeidsken er over og helgen kan snart begynne!
-Idag har jeg jobbet videre med gårdagens utløpsdato-oppgave. Dagen har for det meste gått til å sette opp serversiden slik at den kan ta imot HTTP-requests, for å bruke Postman for å sjekke at responsen kommer tilbake i riktig format og at ingenting går gale.
+Arbeidsuken er over og helgen kan snart begynne!
+Idag har jeg jobbet videre med gårdagens utløpsdato-oppgave. Dagen har for det meste gått til å sette opp serversiden slik at den kan ta imot HTTP-requests, for å bruke **_Postman_** for å sjekke at responsen kommer tilbake i riktig format og at ingenting går gale.
 Videre har jeg lagt til valgfri datostempling av _features_ man legger til fra brukerkrensesnittet (ja jeg har klart å rote meg tilbake på klientsiden). Jeg har og endret koden på serversiden slik at alle _features_ som er utgått på dato ikke sendes fra server i det heletatt, men fortsatt ligger i databasen. Dette gjør at programmet ikke tar unødvendig mye tid å laste og det er enkelt å hente frem historikk.
 
 ## Torsdag
